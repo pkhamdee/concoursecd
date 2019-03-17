@@ -69,3 +69,8 @@ jobs:
       kubectl: apply -f repo/deploy -f repo/deploy/prod
       wait_until_ready: 300
       wait_until_ready_selector: app=myapp
+  - put: prod2
+    params:
+      kubectl: apply -f repo/deploy -f repo/deploy/prod2
+      wait_until_ready: 300
+      wait_until_ready_selector: app=myapp

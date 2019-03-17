@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  rules:
+  - host: myapp2.dev1.pkhamdee.com
+    http:
+      paths:
+      - backend:
+          serviceName: myapp
+          servicePort: 80
