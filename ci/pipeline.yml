@@ -2,14 +2,14 @@ resource_types:
 - name: kubernetes
   type: docker-image
   source:
-    repository: zlabjp/kubernetes-resource
-    tag: "1.8"
+    repository: pkhamdee/kubernetes-resource
+    tag: "1.12"
 
 resources:
 - name: repo
   type: git
   source:
-    uri: git://github.com/zlabjp/concourse-meetup-tokyo-7-demo.git
+    uri: git://github.com/pkhamdee/concoursecd.git
     branch: master
     paths: [deploy/*]
 
@@ -55,7 +55,7 @@ jobs:
         - |
           apt-get update -yqq
           apt-get install curl -yqq
-          curl --fail -H "Host: stage-myapp.example.local" 182.22.30.96
+          curl --fail -H "Host: stage-myapp.dev1.pkhamdee.com" 35.247.186.153
 
 - name: prod-deploy
   serial: true

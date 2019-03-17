@@ -6,7 +6,7 @@ metadata:
     app: myapp
 spec:
   rules:
-  - host: myapp.example.local
+  - host: myapp.dev1.pkhamdee.com
     http:
       paths:
       - backend:
