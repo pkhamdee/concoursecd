@@ -1,0 +1,11 @@
+#login
+fly login -t hello -u test -p test -c http://localhost:8080
+
+#deploy pipeline
+fly -t hello sp -p k8sdeploy -c pipeline.yml --var "stage-kubeconfig=$(cat stage-kubeconfig)" --var "prod-kubeconfig=$(cat prod-kubeconfig)"
+
+#unpaused pipeline
+fly -t hello up -p k8sdeploy
+
+#delete pipeline
+fly -t hello dp -p k8sdeploy

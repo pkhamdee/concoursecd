@@ -32,6 +32,7 @@ jobs:
   - put: stage
     params:
       kubectl: apply -f repo/deploy -f repo/deploy/stage
+      wait_until_ready: 300
       wait_until_ready_selector: app=myapp
 
 - name: stage-e2e
@@ -66,4 +67,5 @@ jobs:
   - put: prod
     params:
       kubectl: apply -f repo/deploy -f repo/deploy/prod
+      wait_until_ready: 300
       wait_until_ready_selector: app=myapp
