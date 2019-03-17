@@ -23,6 +23,11 @@ resources:
   source:
     kubeconfig: ((prod-kubeconfig))
 
+- name: prod2
+  type: kubernetes
+  source:
+    kubeconfig: ((prod2-kubeconfig))
+
 jobs:
 - name: stage-deploy
   serial: true
