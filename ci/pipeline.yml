@@ -63,7 +63,7 @@ jobs:
           apt-get install curl -yqq
           curl --fail -H "Host: stage-myapp.dev1.pkhamdee.com" 35.247.186.153
 
-- name: prod-deploy
+- name: prod02-deploy
   serial: true
   plan:
   - get: repo
@@ -75,7 +75,7 @@ jobs:
       wait_until_ready: 300
       wait_until_ready_selector: app=myapp
 
-- name: cloud-deploy
+- name: prod01-deploy
   serial: true
   plan:
   - get: repo
