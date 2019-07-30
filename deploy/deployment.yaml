@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: pkhamdee/nsx-demo:latest
+        image: pkhamdee/hello-pks:latest
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
