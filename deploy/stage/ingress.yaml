@@ -6,7 +6,7 @@ metadata:
     app: myapp
 spec:
   rules:
-  - host: stage-myapp.dev1.pkhamdee.com
+  - host: stage-myapp.dev1.pcfgcp.pkhamdee.com
     http:
       paths:
       - backend:
